@@ -1,0 +1,7 @@
+# Ruby
+Gemfile.lock
+.bundle/
+.idea/
+vendor/
+/features/reports/
+.ruby-version
