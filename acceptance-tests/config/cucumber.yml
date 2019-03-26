@@ -1,0 +1,4 @@
+---
+default: -r main -r features -r steps  
+ci: -p default --format json --out=features_report.json
+qa: -p default --format pretty --format html --out=features_report.html

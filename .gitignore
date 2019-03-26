@@ -2,6 +2,6 @@
 Gemfile.lock
 .bundle/
 .idea/
-vendor/
-/features/reports/
+**/vendor/
+**/features/reports/
 .ruby-version

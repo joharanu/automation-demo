@@ -1,0 +1,1 @@
+$root_config = YAML.load_file(__dir__ + "/../config/config.yml")
