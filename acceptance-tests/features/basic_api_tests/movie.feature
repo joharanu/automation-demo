@@ -15,9 +15,7 @@ Feature: api_tests.feature
     Then the response code is 200
     Examples:
     |movieid  |
-    |tt3896198|
     |tt5855480|
-
 
   @invalid
   Scenario Outline: Check the response error
