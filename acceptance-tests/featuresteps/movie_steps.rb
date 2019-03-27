@@ -7,8 +7,8 @@ Given(/^I get the content of a movie (.*)$/) do |movieid|
 end
 
 
-Given(/^I hhhh check that the  (.*) is (.*)$/) do |field,contentmessage|
- expect(@response['error']["#{field}"]).to eq contentmessage
+Given(/^I check that the message is (.*)$/) do |contentmessage|
+ expect(@response['Error']).to eq contentmessage
 end
 
 

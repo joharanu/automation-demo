@@ -1,5 +1,5 @@
-# to execute bundle exec cucumber  --tags=@test
-
+# to execute bundle exec cucumber --tags=@apitest
+@apitest
 Feature: api_tests.feature
 #-------------------------------------------------------------------------------------------------#
 #-------------------------------Orchestration basic Tests-----------------------------------------#
@@ -9,30 +9,24 @@ Feature: api_tests.feature
 #----------------------------------- api test---------------------------------------------#
 
 
-  @apitest @valid
+  @valid
   Scenario Outline: Check the 200 response with valid movieid
     Given I get the content of a movie <movieid>
     Then the response code is 200
     Examples:
     |movieid  |
     |tt3896198|
-    |tt5855480|
-
-
 
 
   @invalid
-  Scenario Outline: Check the 400 response bad request - invalid id
+  Scenario Outline: Check the response error
     Given I get the content of a movie <movieid>
-    Then the response code is 400
+    Then the response code is 200
     And I check that the message is <message>
     Examples:
-      |movieid               |message    |
-      |                      |invalid id |
-      |234234_42423__F_F_F_F_|invalid id |
-      |______________________|invalid id |
-      |//////////////////////|invalid id |
-      |----------------------|invalid id |
+      |movieid               |message               |
+      |                      |Something went wrong. |
+      |234234_42423__F_F_F_F_|Incorrect IMDb ID.    |
 
 
 
